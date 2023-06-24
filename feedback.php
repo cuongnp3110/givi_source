@@ -1,7 +1,4 @@
-<?php
-  if(isset($_SESSION['admin']) && $_SESSION['admin']==1)
-  {
-?>
+
 <?php
   if(isset($_SESSION['us']) && $_SESSION['us'] != "")
   {
@@ -95,14 +92,9 @@
   </div>
   <?php
   }
-  ?>
-
-<?php
-  }
   else
   {
-    echo "<script type='text/javascript'>alert('You are not admin');</script>";
+    echo "<script type='text/javascript'>alert('You need to login first');</script>";
     echo '<meta http-equiv="refresh" content="0;URL =index.php"';
   }
-  
-?>
+  ?>

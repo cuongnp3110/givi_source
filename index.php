@@ -356,8 +356,15 @@
                   <li><a href="?page=about">About us</a></li>
                   <li><a href="?page=contact">Contact</a></li>
                   <li><a href="?page=about">About us</a></li>
-                  <li><a href="?page=feedback">Feedback</a></li>
-                  <!-- <li><a href="?page=checkout">Checkout</a></li> -->
+
+                  <?php
+                    if (!isset($_SESSION['admin']) || $_SESSION['admin']!=1){
+                  ?>
+                    <li><a href="?page=feedback">Feedback</a></li>
+                  <?php
+                    }
+                  ?>
+                  
                 </ul>
               </div>
 
